@@ -2,10 +2,4 @@ docs/_build
 node_modules/
 _build
 atlassian-ide-plugin.xml
-include/config.php
-.idea/workspace.xml
-.idea/modules.xml
-.idea/tasks.xml
-.idea/dataSources.ids
-.idea/dataSources.xml
-.idea/dictionaries
+.idea/
