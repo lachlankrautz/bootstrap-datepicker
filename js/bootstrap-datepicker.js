@@ -414,7 +414,8 @@
 			this.place();
 			this._attachSecondaryEvents();
 			this._trigger('show');
-		},
+            $('.disabled.day').tooltip({container: 'body'});
+        },
 
 		hide: function(){
 			if (this.isInline)
