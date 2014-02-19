@@ -788,18 +788,24 @@
 
 				if (this.o.beforeShowDay !== $.noop){
 					var before = this.o.beforeShowDay(this._utc_to_local(prevMonth));
-					if (before === undefined)
+					if (before === undefined) {
 						before = {};
-					else if (typeof(before) === 'boolean')
+                    } else if (typeof(before) === 'boolean') {
 						before = {enabled: before};
-					else if (typeof(before) === 'string')
+                    } else if (typeof(before) === 'string') {
 						before = {classes: before};
-					if (before.enabled === false)
+                    }
+					if (before.enabled === false) {
 						clsName.push('disabled');
-					if (before.classes)
+                    }
+					if (before.classes) {
 						clsName = clsName.concat(before.classes.split(/\s+/));
-					if (before.tooltip)
+                    }
+					if (before.tooltip) {
 						tooltip = before.tooltip;
+                    } else {
+                        tooltip = undefined;
+                    }
 				}
 
 				clsName = $.unique(clsName);
